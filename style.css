@@ -81,7 +81,16 @@ body{
     color:white;
     padding:10px;
     border-radius: 25px;
+    border:solid blueviolet 1px;
    
+}
+.categories p:hover{
+    background-color: transparent;
+    transition:1s;
+    border:solid blueviolet 1px;
+    color:blueviolet;
+    cursor:pointer;
+
 }
 .image-section{
     position:relative;
@@ -94,12 +103,26 @@ body{
 .image-section__offer{
     background-color: white;
     width:30%;
-    padding:5px;
+    padding:15px;
     border:2px solid black;
     position:absolute;
     top:15%;
-    left:10%;
+    left:15%;
+    animation:zoom;
+    animation-duration:1s;
+    opacity:0;
+    animation-fill-mode:forwards;
     
+}
+@keyframes zoom{
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 .recommanded{
     padding:10px;
